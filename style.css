@@ -1,0 +1,401 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #e4e4e4;
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.head{
+    width: 100%;
+}
+
+.head img{
+    width: 100%;
+    height: auto;
+}
+
+.user{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin: 0 auto;
+}
+
+.user img{
+    width: 200px;
+}
+
+.user input{
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid #a8a8a8;
+    padding-left: 10px;
+}
+
+.user button{
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+    border: 3px solid #d62222;
+    background-color: #ffffff;
+    color: #eb2a2a;
+    font-size: 15px;
+}
+
+.user button:hover{
+    background-color: #eb2a2a;
+    color: #ffffff;
+    cursor: pointer;
+}   
+
+.menu{
+    width: 100%;
+    height: auto;
+    background-color: #eb2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 50px;
+}
+
+.menu a:hover{
+    color: #d1d1d1;
+}
+
+.slide{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img{
+    width: 100%;
+    height: auto;
+}
+
+.nav{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.box {
+    position: relative;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-left: 50px;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box a {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.box a:hover {
+    text-decoration: underline;
+    color: #e98080;
+}
+
+.signature{
+    width: 80%;
+    margin-top: 30px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 30px;
+    flex-direction: column;
+}
+
+.signature-list{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    flex-direction: row;
+}
+
+.signature-box{
+    width: 300px;
+    height: 400px;
+    padding-top:20px ;
+    border: 1px solid #a8a8a8;
+    border-radius:20px ;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    flex: 0 0 auto;
+}
+
+.signature-box img{
+    width: 80%;
+    height: 60%;
+}
+.signature-box b{
+    color: #eb2a2a;
+    font-size: 15px;
+}
+
+.signature-box button{
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    border-radius: 40px;
+    border: 3px solid #d62222;
+    background-color: #ffffff;
+    color: #eb2a2a;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.signature-box span{
+    text-decoration: line-through;
+}
+
+.signature-box  button:hover{
+    background-color: #eb2a2a;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.banner-section {
+  display: flex;
+  width: 80%;
+  padding: 40px 0;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.banner-image {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.banner-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.banner-text-right {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 30px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.banner-text-right h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.banner-text-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.banner-text-right a {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.banner-text-right a:hover {
+  border-bottom: 1px solid black;
+}
+
+.banner-women {
+  display: flex;
+  padding: 40px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 80%;
+    margin: 0 auto;
+}
+
+.banner-women-text {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.banner-women-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.banner-women-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.banner-women-text a {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.banner-women-text a:hover {
+  border-bottom: 1px solid black;
+}
+
+.banner-women-images {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.banner-women-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.noibat{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.noibat img{
+    width: 100%;
+    height: auto;
+}
+
+.site-footer {
+  background: #222;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.footer-bottom .japanbaby {
+  color: red;
+}
+
+.footer-bottom .sapo {
+  color: #e44d26;
+  font-weight: bold;
+}
