@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #e4e4e4;
+    background-color: #f4f2f2;
 }
 
 *{
@@ -60,6 +60,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;   /* Giúp dính khi chạm mép */
+    top: 0;  
+    z-index: 2;
 }
 
 .menu a{
@@ -103,12 +106,18 @@ body{
     overflow: hidden;
     border-radius: 8px;
     margin-left: 50px;
+    overflow: hidden;
 }
 
 .box img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.box img:hover {
+    transform: scale(1.55);
+    transition: transform 0.3s ease;
 }
 
 .box a {
@@ -120,10 +129,9 @@ body{
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
-.box a:hover {
+.box a:hover{
     text-decoration: underline;
     color: #e98080;
 }

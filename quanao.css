@@ -1,0 +1,258 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f4f2f2;
+}
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.head{
+    width: 100%;
+}
+
+.head img{
+    width: 100%;
+    height: auto;
+}
+
+.user{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin: 0 auto;
+}
+
+.user img{
+    width: 200px;
+}
+
+.user input{
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid #a8a8a8;
+    padding-left: 10px;
+}
+
+.user button{
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+    border: 3px solid #d62222;
+    background-color: #ffffff;
+    color: #eb2a2a;
+    font-size: 15px;
+}
+
+.user button:hover{
+    background-color: #eb2a2a;
+    color: #ffffff;
+    cursor: pointer;
+}   
+
+.menu{
+    width: 100%;
+    height: auto;
+    background-color: #eb2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;   /* Giúp dính khi chạm mép */
+    top: 0;  
+    z-index: 2;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 50px;
+}
+
+.menu a:hover{
+    color: #d1d1d1;
+}
+
+.site-footer {
+  background: #222;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-column p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.footer-bottom .japanbaby {
+  color: red;
+}
+
+.footer-bottom .sapo {
+  color: #e44d26;
+  font-weight: bold;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.menu-nav .page a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.menu-nav .page a.red {
+    color: #eb2a2a;
+}
+
+.menu-nav .name h1 {
+    font-size: 30px;
+    color: #eb2a2a;
+    margin-top: 10px; /* tạo khoảng cách với breadcrumb */
+}
+
+.product {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-left{
+    width: 30%;
+}
+
+.product-right{
+    width: 65%;
+    padding: 20px;
+}
+
+.item{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-category {
+    width: 100%;
+    height: 200px;
+    overflow: scroll;
+    display: block;  
+    justify-content: space-between;
+    border: 2px solid #adadad;
+}
+
+.box-category a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+     display: block;
+    padding: 10px 20px;
+}
+
+.item-box{
+    width: 250px;
+    text-align: center;
+    border: 1px solid #cc0606;
+    box-shadow:  0 8px 14px rgba(0,0,0,0.1);
+    margin-left: 20px;
+    margin-top: 20px;
+    height: auto;
+}
+
+.item-box img{
+    width: 80%;
+    height: 50%;
+    margin-top: 20px;
+}
+.item-box b{
+    color: #eb2a2a;
+    font-size: 15px;
+}
+
+.item-box button{
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    border-radius: 40px;
+    border: 3px solid #d62222;
+    background-color: #ffffff;
+    color: #eb2a2a;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.item-box span{
+    text-decoration: line-through;
+}
+
+.item-box  button:hover{
+    background-color: #eb2a2a;
+    color: #ffffff;
+    cursor: pointer;
+}   
