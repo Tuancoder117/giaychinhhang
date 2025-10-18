@@ -212,5 +212,67 @@
   </div>
 </footer>
 
+    <!-- Popup modal -->
+<style>
+  #copilot-popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;z-index:9999}
+  #copilot-popup{background:#fff;padding:20px;max-width:420px;width:90%;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.3);font-family:inherit}
+  #copilot-popup h3{margin:0 0 8px;font-size:18px}
+  #copilot-popup p{margin:0 0 12px;color:#444}
+  #copilot-popup .cp-actions{text-align:right}
+  #copilot-popup .cp-btn{background:#0a84ff;color:#fff;border:none;padding:8px 12px;border-radius:5px;cursor:pointer}
+  #copilot-popup .cp-close{background:transparent;border:0;color:#555;margin-right:8px;cursor:pointer}
+</style>
+
+<div id="copilot-popup-overlay" aria-hidden="true" role="dialog">
+  <div id="copilot-popup" role="document">
+    <h3 id="copilot-popup-title">Xem tất cả</h3>
+    <p id="copilot-popup-body">Bạn sắp chuyển tới trang xem tất cả sản phẩm.</p>
+    <div class="cp-actions">
+      <button class="cp-close" type="button">Hủy</button>
+      <button class="cp-btn" id="copilot-popup-ok" type="button">Tiếp tục</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    const overlay = document.getElementById('copilot-popup-overlay');
+    const titleEl = document.getElementById('copilot-popup-title');
+    const bodyEl = document.getElementById('copilot-popup-body');
+    const btnOk = document.getElementById('copilot-popup-ok');
+    const btnClose = document.querySelector('.cp-close');
+    let targetHref = '#';
+
+    // Find all anchors whose text includes "XEM TẤT CẢ" (case-insensitive)
+    document.querySelectorAll('a').forEach(a=>{
+      if (a.textContent && a.textContent.toUpperCase().includes('XEM TẤT CẢ')) {
+        a.addEventListener('click', function(e){
+          e.preventDefault();
+          targetHref = a.getAttribute('href') || '#';
+          // Try to show nearby heading text if available
+          const section = a.closest('.banner-section, .banner-women, .banner-women-text, .banner-text-right');
+          const heading = section ? section.querySelector('h2') : null;
+          titleEl.textContent = heading ? heading.textContent : 'Xem tất cả';
+          bodyEl.textContent = 'Bạn sắp chuyển tới trang "' + titleEl.textContent + '". Tiếp tục?';
+          overlay.style.display = 'flex';
+          overlay.setAttribute('aria-hidden','false');
+        });
+      }
+    });
+
+    btnClose.addEventListener('click', closePopup);
+    overlay.addEventListener('click', function(e){ if (e.target === overlay) closePopup(); });
+    btnOk.addEventListener('click', function(){
+      closePopup();
+      // Navigate (if href is '#', do nothing)
+      if (targetHref && targetHref !== '#') location.href = targetHref;
+    });
+
+    function closePopup(){
+      overlay.style.display = 'none';
+      overlay.setAttribute('aria-hidden','true');
+    }
+  })();
+</script>
 </body>
 </html>
